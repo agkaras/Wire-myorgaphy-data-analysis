@@ -39,8 +39,8 @@ mPhe =  df.index.get_loc((df.loc['#* Phe3uM ']).name) - 1
 wyniki['Phe_max_skurcz'] = (df.loc['#* Phe3uM ': '#* PP '].max()) - df.iloc[mPhe]
 
 #submaximal contraction induced with 0.1-1μM phenylephrine 
-xPhe = df.index.get_loc((df.loc['#* Phe0,1 ']).name) - 1
-wyniki['Phe_skurcz'] = (df.loc['#* Phe0,1 ': '#* Ach0,001 '].max()) - df.iloc[xPhe]
+xPhe = df.index.get_loc((df.loc['#* subPhe ']).name) - 1
+wyniki['Phe_skurcz'] = (df.loc['#* subPhe ': '#* Ach0,001 '].max()) - df.iloc[xPhe]
 
 #relaxation to cumulative concentrations of acetylcholine 0.001–10 μM
 yAch = df.index.get_loc((df.loc['#* Ach0,001 ']).name) - 1
@@ -51,8 +51,8 @@ wyniki['Ach1'] = df.iloc[yAch] - (df.loc['#* Ach1 ':'#* Ach10 '].min())
 wyniki['Ach10'] = df.iloc[yAch] - (df.loc['#* Ach10 ':'#* P3 '].min())
 
 #second submaximal contraction induced with 0.1-1μM phenylephrine
-yPhe2 = df.index.get_loc((df.loc['#* 2Phe0,1 ']).name) - 1
-wyniki['Phe_skurcz2'] = (df.loc['#* 2Phe0,1 ': '#* SNP0,001 '].max()) - df.iloc[yPhe2]
+yPhe2 = df.index.get_loc((df.loc['#* 2subPhe ']).name) - 1
+wyniki['Phe_skurcz2'] = (df.loc['#* 2subPhe ': '#* SNP0,001 '].max()) - df.iloc[yPhe2]
 
 #relaxation to cumulative concentrations of SNP 0.001–1 μM
 ySNP = df.index.get_loc((df.loc['#* SNP0,001 ']).name) - 1
